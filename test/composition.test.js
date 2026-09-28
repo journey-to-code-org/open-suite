@@ -1,0 +1,8 @@
+import test from "node:test";import assert from "node:assert/strict";import{arrayChunk,arrayUnique,asyncPool,jsonFlatten,jsonUnflatten,querySerializer,extractUrls,stringCase,truncateWords,base64Url,hexToBytes,geoDistance,clampNumber,cookieParser,sseEncoder}from"../src/index.js";
+test("array + async composition",async()=>{const chunks=arrayChunk.chunkArray([1,2,2,3,4],2);const out=await asyncPool.asyncPool(chunks,async c=>arrayUnique.uniqueArray(c),{concurrency:2});assert.deepEqual(out,[[1,2],[2,3],[4]]);});
+test("json round trip",()=>{const src={user:{name:"Mikey",tags:["web","node"]}};assert.deepEqual(jsonUnflatten.unflattenObject(jsonFlatten.flattenObject(src)),src);});
+test("query + URL composition",()=>{const q=querySerializer.stringifyQuery({page:2,tag:["web","node"]});const urls=extractUrls.extractUrls(`Open https://example.com/search?${q}.`);assert.equal(urls.length,1);});
+test("text composition",()=>{const label=stringCase.titleCase("release_status");assert.equal(truncateWords.truncateWords(`${label} is ready to publish`,4),"Release Status is ready…");});
+test("encoding composition",()=>{const b=hexToBytes.hexToBytes("00ff10");const enc=base64Url.encodeBase64Url(b);assert.deepEqual([...base64Url.decodeBase64Url(enc,{output:"bytes"})],[0,255,16]);});
+test("math composition",()=>{const km=geoDistance.geoDistance({latitude:0,longitude:0},{latitude:0,longitude:1},{unit:"kilometers"});assert.equal(clampNumber.clamp(km,0,100),100);});
+test("web composition",()=>{const cookies=cookieParser.parseCookieHeader("theme=dark; user=42");const frame=sseEncoder.encodeSseEvent({event:"session",data:cookies});assert.match(frame,/event: session/u);assert.match(frame,/"theme":"dark"/u);});

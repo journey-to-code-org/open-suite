@@ -1,0 +1,3 @@
+import test from "node:test";import assert from "node:assert/strict";import{packages}from"../src/manifest.js";
+test("all direct imports resolve",async()=>{const failures=[];for(const e of packages){try{assert.equal(typeof await import(e.name),"object");}catch(err){failures.push(`${e.name}: ${err?.message??err}`);}}assert.deepEqual(failures,[]);});
+test("all suite subpaths resolve",async()=>{const failures=[];for(const e of packages){try{assert.equal(typeof await import(`@journey-to-code/open-suite/packages/${e.subpath}`),"object");}catch(err){failures.push(`${e.subpath}: ${err?.message??err}`);}}assert.deepEqual(failures,[]);});

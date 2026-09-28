@@ -1,0 +1,566 @@
+{
+  "name": "@journey-to-code/open-suite",
+  "version": "1.0.0",
+  "description": "A single, tested entry point for the Journey to Code open utility ecosystem.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./manifest": {
+      "types": "./src/manifest.d.ts",
+      "import": "./src/manifest.js",
+      "default": "./src/manifest.js"
+    },
+    "./text": {
+      "types": "./src/text.d.ts",
+      "import": "./src/text.js",
+      "default": "./src/text.js"
+    },
+    "./arrays": {
+      "types": "./src/arrays.d.ts",
+      "import": "./src/arrays.js",
+      "default": "./src/arrays.js"
+    },
+    "./objects": {
+      "types": "./src/objects.d.ts",
+      "import": "./src/objects.js",
+      "default": "./src/objects.js"
+    },
+    "./async": {
+      "types": "./src/async.d.ts",
+      "import": "./src/async.js",
+      "default": "./src/async.js"
+    },
+    "./dates": {
+      "types": "./src/dates.d.ts",
+      "import": "./src/dates.js",
+      "default": "./src/dates.js"
+    },
+    "./math": {
+      "types": "./src/math.d.ts",
+      "import": "./src/math.js",
+      "default": "./src/math.js"
+    },
+    "./data": {
+      "types": "./src/data.d.ts",
+      "import": "./src/data.js",
+      "default": "./src/data.js"
+    },
+    "./encoding": {
+      "types": "./src/encoding.d.ts",
+      "import": "./src/encoding.js",
+      "default": "./src/encoding.js"
+    },
+    "./validation": {
+      "types": "./src/validation.d.ts",
+      "import": "./src/validation.js",
+      "default": "./src/validation.js"
+    },
+    "./web": {
+      "types": "./src/web.d.ts",
+      "import": "./src/web.js",
+      "default": "./src/web.js"
+    },
+    "./state": {
+      "types": "./src/state.d.ts",
+      "import": "./src/state.js",
+      "default": "./src/state.js"
+    },
+    "./cache": {
+      "types": "./src/cache.d.ts",
+      "import": "./src/cache.js",
+      "default": "./src/cache.js"
+    },
+    "./filesystem": {
+      "types": "./src/filesystem.d.ts",
+      "import": "./src/filesystem.js",
+      "default": "./src/filesystem.js"
+    },
+    "./color": {
+      "types": "./src/color.d.ts",
+      "import": "./src/color.js",
+      "default": "./src/color.js"
+    },
+    "./markdown": {
+      "types": "./src/markdown.d.ts",
+      "import": "./src/markdown.js",
+      "default": "./src/markdown.js"
+    },
+    "./dev": {
+      "types": "./src/dev.d.ts",
+      "import": "./src/dev.js",
+      "default": "./src/dev.js"
+    },
+    "./packages/camel-to-title": {
+      "types": "./src/packages/camel-to-title.d.ts",
+      "import": "./src/packages/camel-to-title.js",
+      "default": "./src/packages/camel-to-title.js"
+    },
+    "./packages/extract-hashtags": {
+      "types": "./src/packages/extract-hashtags.d.ts",
+      "import": "./src/packages/extract-hashtags.js",
+      "default": "./src/packages/extract-hashtags.js"
+    },
+    "./packages/extract-urls": {
+      "types": "./src/packages/extract-urls.d.ts",
+      "import": "./src/packages/extract-urls.js",
+      "default": "./src/packages/extract-urls.js"
+    },
+    "./packages/slug": {
+      "types": "./src/packages/slug.d.ts",
+      "import": "./src/packages/slug.js",
+      "default": "./src/packages/slug.js"
+    },
+    "./packages/string-case": {
+      "types": "./src/packages/string-case.d.ts",
+      "import": "./src/packages/string-case.js",
+      "default": "./src/packages/string-case.js"
+    },
+    "./packages/strip-accents": {
+      "types": "./src/packages/strip-accents.d.ts",
+      "import": "./src/packages/strip-accents.js",
+      "default": "./src/packages/strip-accents.js"
+    },
+    "./packages/template-interpolate": {
+      "types": "./src/packages/template-interpolate.d.ts",
+      "import": "./src/packages/template-interpolate.js",
+      "default": "./src/packages/template-interpolate.js"
+    },
+    "./packages/text": {
+      "types": "./src/packages/text.d.ts",
+      "import": "./src/packages/text.js",
+      "default": "./src/packages/text.js"
+    },
+    "./packages/truncate-words": {
+      "types": "./src/packages/truncate-words.d.ts",
+      "import": "./src/packages/truncate-words.js",
+      "default": "./src/packages/truncate-words.js"
+    },
+    "./packages/word-wrap": {
+      "types": "./src/packages/word-wrap.d.ts",
+      "import": "./src/packages/word-wrap.js",
+      "default": "./src/packages/word-wrap.js"
+    },
+    "./packages/array-chunk": {
+      "types": "./src/packages/array-chunk.d.ts",
+      "import": "./src/packages/array-chunk.js",
+      "default": "./src/packages/array-chunk.js"
+    },
+    "./packages/array-unique": {
+      "types": "./src/packages/array-unique.d.ts",
+      "import": "./src/packages/array-unique.js",
+      "default": "./src/packages/array-unique.js"
+    },
+    "./packages/object-pick-omit": {
+      "types": "./src/packages/object-pick-omit.d.ts",
+      "import": "./src/packages/object-pick-omit.js",
+      "default": "./src/packages/object-pick-omit.js"
+    },
+    "./packages/async-pool": {
+      "types": "./src/packages/async-pool.d.ts",
+      "import": "./src/packages/async-pool.js",
+      "default": "./src/packages/async-pool.js"
+    },
+    "./packages/debounce-throttle": {
+      "types": "./src/packages/debounce-throttle.d.ts",
+      "import": "./src/packages/debounce-throttle.js",
+      "default": "./src/packages/debounce-throttle.js"
+    },
+    "./packages/retry-async": {
+      "types": "./src/packages/retry-async.d.ts",
+      "import": "./src/packages/retry-async.js",
+      "default": "./src/packages/retry-async.js"
+    },
+    "./packages/add-time": {
+      "types": "./src/packages/add-time.d.ts",
+      "import": "./src/packages/add-time.js",
+      "default": "./src/packages/add-time.js"
+    },
+    "./packages/date-diff": {
+      "types": "./src/packages/date-diff.d.ts",
+      "import": "./src/packages/date-diff.js",
+      "default": "./src/packages/date-diff.js"
+    },
+    "./packages/date-range-generator": {
+      "types": "./src/packages/date-range-generator.d.ts",
+      "import": "./src/packages/date-range-generator.js",
+      "default": "./src/packages/date-range-generator.js"
+    },
+    "./packages/duration-format": {
+      "types": "./src/packages/duration-format.d.ts",
+      "import": "./src/packages/duration-format.js",
+      "default": "./src/packages/duration-format.js"
+    },
+    "./packages/fiscal-year": {
+      "types": "./src/packages/fiscal-year.d.ts",
+      "import": "./src/packages/fiscal-year.js",
+      "default": "./src/packages/fiscal-year.js"
+    },
+    "./packages/is-leap-year": {
+      "types": "./src/packages/is-leap-year.d.ts",
+      "import": "./src/packages/is-leap-year.js",
+      "default": "./src/packages/is-leap-year.js"
+    },
+    "./packages/relative-time": {
+      "types": "./src/packages/relative-time.d.ts",
+      "import": "./src/packages/relative-time.js",
+      "default": "./src/packages/relative-time.js"
+    },
+    "./packages/time-range-overlap": {
+      "types": "./src/packages/time-range-overlap.d.ts",
+      "import": "./src/packages/time-range-overlap.js",
+      "default": "./src/packages/time-range-overlap.js"
+    },
+    "./packages/bounding-box-2d": {
+      "types": "./src/packages/bounding-box-2d.d.ts",
+      "import": "./src/packages/bounding-box-2d.js",
+      "default": "./src/packages/bounding-box-2d.js"
+    },
+    "./packages/bytes-to-bits": {
+      "types": "./src/packages/bytes-to-bits.d.ts",
+      "import": "./src/packages/bytes-to-bits.js",
+      "default": "./src/packages/bytes-to-bits.js"
+    },
+    "./packages/clamp-number": {
+      "types": "./src/packages/clamp-number.d.ts",
+      "import": "./src/packages/clamp-number.js",
+      "default": "./src/packages/clamp-number.js"
+    },
+    "./packages/currency-formatter": {
+      "types": "./src/packages/currency-formatter.d.ts",
+      "import": "./src/packages/currency-formatter.js",
+      "default": "./src/packages/currency-formatter.js"
+    },
+    "./packages/file-size-format": {
+      "types": "./src/packages/file-size-format.d.ts",
+      "import": "./src/packages/file-size-format.js",
+      "default": "./src/packages/file-size-format.js"
+    },
+    "./packages/geo-distance": {
+      "types": "./src/packages/geo-distance.d.ts",
+      "import": "./src/packages/geo-distance.js",
+      "default": "./src/packages/geo-distance.js"
+    },
+    "./packages/greatest-common-divisor": {
+      "types": "./src/packages/greatest-common-divisor.d.ts",
+      "import": "./src/packages/greatest-common-divisor.js",
+      "default": "./src/packages/greatest-common-divisor.js"
+    },
+    "./packages/math-lerp": {
+      "types": "./src/packages/math-lerp.d.ts",
+      "import": "./src/packages/math-lerp.js",
+      "default": "./src/packages/math-lerp.js"
+    },
+    "./packages/percentage-change": {
+      "types": "./src/packages/percentage-change.d.ts",
+      "import": "./src/packages/percentage-change.js",
+      "default": "./src/packages/percentage-change.js"
+    },
+    "./packages/random-distribution": {
+      "types": "./src/packages/random-distribution.d.ts",
+      "import": "./src/packages/random-distribution.js",
+      "default": "./src/packages/random-distribution.js"
+    },
+    "./packages/roman-numerals": {
+      "types": "./src/packages/roman-numerals.d.ts",
+      "import": "./src/packages/roman-numerals.js",
+      "default": "./src/packages/roman-numerals.js"
+    },
+    "./packages/statistics-basic": {
+      "types": "./src/packages/statistics-basic.d.ts",
+      "import": "./src/packages/statistics-basic.js",
+      "default": "./src/packages/statistics-basic.js"
+    },
+    "./packages/csv-tsv-to-json": {
+      "types": "./src/packages/csv-tsv-to-json.d.ts",
+      "import": "./src/packages/csv-tsv-to-json.js",
+      "default": "./src/packages/csv-tsv-to-json.js"
+    },
+    "./packages/json-to-csv-tsv": {
+      "types": "./src/packages/json-to-csv-tsv.d.ts",
+      "import": "./src/packages/json-to-csv-tsv.js",
+      "default": "./src/packages/json-to-csv-tsv.js"
+    },
+    "./packages/json-flatten": {
+      "types": "./src/packages/json-flatten.d.ts",
+      "import": "./src/packages/json-flatten.js",
+      "default": "./src/packages/json-flatten.js"
+    },
+    "./packages/json-to-env": {
+      "types": "./src/packages/json-to-env.d.ts",
+      "import": "./src/packages/json-to-env.js",
+      "default": "./src/packages/json-to-env.js"
+    },
+    "./packages/json-unflatten": {
+      "types": "./src/packages/json-unflatten.d.ts",
+      "import": "./src/packages/json-unflatten.js",
+      "default": "./src/packages/json-unflatten.js"
+    },
+    "./packages/ndjson-to-json": {
+      "types": "./src/packages/ndjson-to-json.d.ts",
+      "import": "./src/packages/ndjson-to-json.js",
+      "default": "./src/packages/ndjson-to-json.js"
+    },
+    "./packages/base64-url": {
+      "types": "./src/packages/base64-url.d.ts",
+      "import": "./src/packages/base64-url.js",
+      "default": "./src/packages/base64-url.js"
+    },
+    "./packages/hex-to-bytes": {
+      "types": "./src/packages/hex-to-bytes.d.ts",
+      "import": "./src/packages/hex-to-bytes.js",
+      "default": "./src/packages/hex-to-bytes.js"
+    },
+    "./packages/html-entities": {
+      "types": "./src/packages/html-entities.d.ts",
+      "import": "./src/packages/html-entities.js",
+      "default": "./src/packages/html-entities.js"
+    },
+    "./packages/random-string": {
+      "types": "./src/packages/random-string.d.ts",
+      "import": "./src/packages/random-string.js",
+      "default": "./src/packages/random-string.js"
+    },
+    "./packages/rot13": {
+      "types": "./src/packages/rot13.d.ts",
+      "import": "./src/packages/rot13.js",
+      "default": "./src/packages/rot13.js"
+    },
+    "./packages/is-hex-color": {
+      "types": "./src/packages/is-hex-color.d.ts",
+      "import": "./src/packages/is-hex-color.js",
+      "default": "./src/packages/is-hex-color.js"
+    },
+    "./packages/is-ip": {
+      "types": "./src/packages/is-ip.d.ts",
+      "import": "./src/packages/is-ip.js",
+      "default": "./src/packages/is-ip.js"
+    },
+    "./packages/is-isbn": {
+      "types": "./src/packages/is-isbn.d.ts",
+      "import": "./src/packages/is-isbn.js",
+      "default": "./src/packages/is-isbn.js"
+    },
+    "./packages/is-json-string": {
+      "types": "./src/packages/is-json-string.d.ts",
+      "import": "./src/packages/is-json-string.js",
+      "default": "./src/packages/is-json-string.js"
+    },
+    "./packages/is-mac-address": {
+      "types": "./src/packages/is-mac-address.d.ts",
+      "import": "./src/packages/is-mac-address.js",
+      "default": "./src/packages/is-mac-address.js"
+    },
+    "./packages/is-port": {
+      "types": "./src/packages/is-port.d.ts",
+      "import": "./src/packages/is-port.js",
+      "default": "./src/packages/is-port.js"
+    },
+    "./packages/is-url": {
+      "types": "./src/packages/is-url.d.ts",
+      "import": "./src/packages/is-url.js",
+      "default": "./src/packages/is-url.js"
+    },
+    "./packages/is-uuid": {
+      "types": "./src/packages/is-uuid.d.ts",
+      "import": "./src/packages/is-uuid.js",
+      "default": "./src/packages/is-uuid.js"
+    },
+    "./packages/basic-auth-parser": {
+      "types": "./src/packages/basic-auth-parser.d.ts",
+      "import": "./src/packages/basic-auth-parser.js",
+      "default": "./src/packages/basic-auth-parser.js"
+    },
+    "./packages/cookie-parser": {
+      "types": "./src/packages/cookie-parser.d.ts",
+      "import": "./src/packages/cookie-parser.js",
+      "default": "./src/packages/cookie-parser.js"
+    },
+    "./packages/http-status-codes": {
+      "types": "./src/packages/http-status-codes.d.ts",
+      "import": "./src/packages/http-status-codes.js",
+      "default": "./src/packages/http-status-codes.js"
+    },
+    "./packages/link-header-parser": {
+      "types": "./src/packages/link-header-parser.d.ts",
+      "import": "./src/packages/link-header-parser.js",
+      "default": "./src/packages/link-header-parser.js"
+    },
+    "./packages/query-serializer": {
+      "types": "./src/packages/query-serializer.d.ts",
+      "import": "./src/packages/query-serializer.js",
+      "default": "./src/packages/query-serializer.js"
+    },
+    "./packages/sse-encoder": {
+      "types": "./src/packages/sse-encoder.d.ts",
+      "import": "./src/packages/sse-encoder.js",
+      "default": "./src/packages/sse-encoder.js"
+    },
+    "./packages/event-emitter": {
+      "types": "./src/packages/event-emitter.d.ts",
+      "import": "./src/packages/event-emitter.js",
+      "default": "./src/packages/event-emitter.js"
+    },
+    "./packages/state-machine": {
+      "types": "./src/packages/state-machine.d.ts",
+      "import": "./src/packages/state-machine.js",
+      "default": "./src/packages/state-machine.js"
+    },
+    "./packages/lru-cache": {
+      "types": "./src/packages/lru-cache.d.ts",
+      "import": "./src/packages/lru-cache.js",
+      "default": "./src/packages/lru-cache.js"
+    },
+    "./packages/memoize": {
+      "types": "./src/packages/memoize.d.ts",
+      "import": "./src/packages/memoize.js",
+      "default": "./src/packages/memoize.js"
+    },
+    "./packages/safe-filename": {
+      "types": "./src/packages/safe-filename.d.ts",
+      "import": "./src/packages/safe-filename.js",
+      "default": "./src/packages/safe-filename.js"
+    },
+    "./packages/color-contrast": {
+      "types": "./src/packages/color-contrast.d.ts",
+      "import": "./src/packages/color-contrast.js",
+      "default": "./src/packages/color-contrast.js"
+    },
+    "./packages/document": {
+      "types": "./src/packages/document.d.ts",
+      "import": "./src/packages/document.js",
+      "default": "./src/packages/document.js"
+    },
+    "./packages/markdown-parser": {
+      "types": "./src/packages/markdown-parser.d.ts",
+      "import": "./src/packages/markdown-parser.js",
+      "default": "./src/packages/markdown-parser.js"
+    },
+    "./packages/outline": {
+      "types": "./src/packages/outline.d.ts",
+      "import": "./src/packages/outline.js",
+      "default": "./src/packages/outline.js"
+    },
+    "./packages/preflight": {
+      "types": "./src/packages/preflight.d.ts",
+      "import": "./src/packages/preflight.js",
+      "default": "./src/packages/preflight.js"
+    },
+    "./packages/release": {
+      "types": "./src/packages/release.d.ts",
+      "import": "./src/packages/release.js",
+      "default": "./src/packages/release.js"
+    }
+  },
+  "files": [
+    "src",
+    "scripts",
+    "README.md",
+    "LICENSE",
+    "ecosystem.json"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "verify-packages": "node ./scripts/verify-packages.js",
+    "check": "npm run verify-packages && npm test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/journey-to-code-org/open-suite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/journey-to-code-org/open-suite/issues"
+  },
+  "homepage": "https://github.com/journey-to-code-org/open-suite#readme",
+  "keywords": [
+    "journey-to-code",
+    "utilities",
+    "toolkit",
+    "ecosystem",
+    "meta-package"
+  ],
+  "license": "MIT",
+  "sideEffects": false,
+  "dependencies": {
+    "@journey-to-code/array-chunk": "^1.0.1",
+    "@journey-to-code/csv-tsv-to-json": "^1.0.0",
+    "@journey-to-code/json-to-csv-tsv": "^1.0.1",
+    "@journey-to-code/open-add-time": "^1.0.0",
+    "@journey-to-code/open-array-unique": "^1.0.0",
+    "@journey-to-code/open-async-pool": "^1.0.0",
+    "@journey-to-code/open-base64-url": "^1.0.0",
+    "@journey-to-code/open-basic-auth-parser": "^1.0.0",
+    "@journey-to-code/open-bounding-box-2d": "^1.0.0",
+    "@journey-to-code/open-bytes-to-bits": "^1.0.0",
+    "@journey-to-code/open-camel-to-title": "^1.0.0",
+    "@journey-to-code/open-clamp-number": "^1.0.0",
+    "@journey-to-code/open-color-contrast": "^1.0.0",
+    "@journey-to-code/open-cookie-parser": "^1.0.0",
+    "@journey-to-code/open-currency-formatter": "^1.0.0",
+    "@journey-to-code/open-date-diff": "^1.0.0",
+    "@journey-to-code/open-date-range-generator": "^1.0.0",
+    "@journey-to-code/open-debounce-throttle": "^1.0.0",
+    "@journey-to-code/open-document": "^1.0.0",
+    "@journey-to-code/open-duration-format": "^1.0.0",
+    "@journey-to-code/open-event-emitter": "^1.0.0",
+    "@journey-to-code/open-extract-hashtags": "^1.0.0",
+    "@journey-to-code/open-extract-urls": "^1.0.0",
+    "@journey-to-code/open-file-size-format": "^1.0.0",
+    "@journey-to-code/open-fiscal-year": "^1.0.0",
+    "@journey-to-code/open-geo-distance": "^1.0.0",
+    "@journey-to-code/open-greatest-common-divisor": "^1.0.0",
+    "@journey-to-code/open-hex-to-bytes": "^1.0.0",
+    "@journey-to-code/open-html-entities": "^1.0.0",
+    "@journey-to-code/open-http-status-codes": "^1.0.0",
+    "@journey-to-code/open-is-hex-color": "^1.0.0",
+    "@journey-to-code/open-is-ip": "^1.0.0",
+    "@journey-to-code/open-is-isbn": "^1.0.0",
+    "@journey-to-code/open-is-json-string": "^1.0.0",
+    "@journey-to-code/open-is-leap-year": "^1.0.0",
+    "@journey-to-code/open-is-mac-address": "^1.0.0",
+    "@journey-to-code/open-is-port": "^1.0.0",
+    "@journey-to-code/open-is-url": "^1.0.0",
+    "@journey-to-code/open-is-uuid": "^1.0.0",
+    "@journey-to-code/open-json-flatten": "^1.0.0",
+    "@journey-to-code/open-json-to-env": "^1.0.0",
+    "@journey-to-code/open-json-unflatten": "^1.0.0",
+    "@journey-to-code/open-link-header-parser": "^1.0.0",
+    "@journey-to-code/open-lru-cache": "^1.0.0",
+    "@journey-to-code/open-markdown-parser": "^1.0.0",
+    "@journey-to-code/open-math-lerp": "^1.0.0",
+    "@journey-to-code/open-memoize": "^1.0.0",
+    "@journey-to-code/open-ndjson-to-json": "^1.0.0",
+    "@journey-to-code/open-object-pick-omit": "^1.0.0",
+    "@journey-to-code/open-outline": "^1.0.0",
+    "@journey-to-code/open-percentage-change": "^1.0.0",
+    "@journey-to-code/open-preflight": "^1.0.1",
+    "@journey-to-code/open-query-serializer": "^1.0.0",
+    "@journey-to-code/open-random-distribution": "^1.0.0",
+    "@journey-to-code/open-random-string": "^1.0.0",
+    "@journey-to-code/open-relative-time": "^1.0.0",
+    "@journey-to-code/open-release": "^1.0.4",
+    "@journey-to-code/open-retry-async": "^1.0.0",
+    "@journey-to-code/open-roman-numerals": "^1.0.0",
+    "@journey-to-code/open-rot13": "^1.0.0",
+    "@journey-to-code/open-safe-filename": "^1.0.0",
+    "@journey-to-code/open-slug": "^1.0.0",
+    "@journey-to-code/open-sse-encoder": "^1.0.0",
+    "@journey-to-code/open-state-machine": "^1.0.0",
+    "@journey-to-code/open-statistics-basic": "^1.0.0",
+    "@journey-to-code/open-string-case": "^1.0.0",
+    "@journey-to-code/open-strip-accents": "^1.0.0",
+    "@journey-to-code/open-template-interpolate": "^1.0.0",
+    "@journey-to-code/open-text": "^1.0.0",
+    "@journey-to-code/open-time-range-overlap": "^1.0.0",
+    "@journey-to-code/open-truncate-words": "^1.0.0",
+    "@journey-to-code/open-word-wrap": "^1.0.0"
+  }
+}
